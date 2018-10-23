@@ -13,8 +13,12 @@ use yii\web\Controller;
 
 class CameraController extends Controller
 {
-    public function actionIndex(){
+    public function actionList(){
         return $this->render('camerasList');
+    }
+
+    public function actionCamera(){
+        return $this->render('camera');
     }
 
 }

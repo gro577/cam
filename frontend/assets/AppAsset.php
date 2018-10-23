@@ -18,7 +18,7 @@ class AppAsset extends AssetBundle
         'css/prettyPhoto.css',
         'css/flexslider.css',
         'css/custom-styles.css',
-        'css/style-ie.css',
+        //'css/style-ie.css',
         //'css/site.css',
     ];
     public $js = [
@@ -31,8 +31,8 @@ class AppAsset extends AssetBundle
        // 'js/templateScript.js',
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+       // 'yii\web\YiiAsset',
+       // 'yii\bootstrap\BootstrapAsset',
     ];
 
 }

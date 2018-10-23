@@ -131,6 +131,7 @@ AppAsset::register($this);
         </div>
 
     </div><!-- End Header -->
+    <div class="row">
     <div class="span2 blog-style-2"><!-- Begin sidebar column -->
 
         <!--Navigation-->
@@ -171,6 +172,7 @@ AppAsset::register($this);
 
     </div><!-- End sidebar column -->
         <?= $content ?>
+    </div>
 </div>
 
 <div class="footer-container"><!-- Begin Footer -->
