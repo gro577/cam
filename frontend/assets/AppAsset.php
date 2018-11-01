@@ -18,6 +18,7 @@ class AppAsset extends AssetBundle
         'css/prettyPhoto.css',
         'css/flexslider.css',
         'css/custom-styles.css',
+        'css/common.css',
         //'css/style-ie.css',
         //'css/site.css',
     ];

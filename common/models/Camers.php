@@ -11,6 +11,7 @@ use Yii;
  * @property string $url
  * @property string $base_url
  * @property string $title
+ * @property string $alias
  * @property string $breadcrumbs
  * @property string $preview
  * @property string $description
@@ -40,6 +41,7 @@ class Camers extends \yii\db\ActiveRecord
             [['url', 'base_url', 'title', 'breadcrumbs', 'preview', 'description', 'geography', 'time_zone', 'quality', 'source'], 'string'],
             [['title', 'breadcrumbs', 'url_type'], 'required'],
             [['url_type', 'publicate'], 'integer'],
+            [['alias'], 'string', 'max' => 250],
         ];
     }
 
@@ -53,6 +55,7 @@ class Camers extends \yii\db\ActiveRecord
             'url' => 'Url',
             'base_url' => 'Base Url',
             'title' => 'Title',
+            'alias' => 'Alias',
             'breadcrumbs' => 'Breadcrumbs',
             'preview' => 'Preview',
             'description' => 'Description',
@@ -64,4 +67,6 @@ class Camers extends \yii\db\ActiveRecord
             'publicate' => 'Publicate',
         ];
     }
+
+
 }

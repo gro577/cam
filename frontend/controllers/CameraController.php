@@ -9,16 +9,30 @@
 namespace frontend\controllers;
 
 
+use frontend\models\Camera;
+use yii\data\Pagination;
 use yii\web\Controller;
 
 class CameraController extends Controller
 {
+    const LIMITITEMSPERPAGE = 10;
+
     public function actionList(){
-        return $this->render('camerasList');
+        $camers= Camera::find()->where(['publicate'=>Camera::PUBLICATE]);
+        $pages = new Pagination(['totalCount'=>$camers->count(), 'pageSize' => self::LIMITITEMSPERPAGE]);
+        $pages->pageSizeParam = false;
+        $models = $camers->offset($pages->offset)
+            ->limit($pages->limit)
+            ->all();
+        return $this->render('camerasList', [
+            'models' => $models,
+            'pages' => $pages,
+        ]);
     }
 
     public function actionCamera(){
-        return $this->render('camera');
+        $camera = Camera::findById(14);
+        return $this->render('camera',['camera'=>$camera]);
     }
 
 }
