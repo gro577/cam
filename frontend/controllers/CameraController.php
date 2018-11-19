@@ -30,8 +30,8 @@ class CameraController extends Controller
         ]);
     }
 
-    public function actionCamera(){
-        $camera = Camera::findById(14);
+    public function actionCamera($id){
+        $camera = Camera::findById($id);
         return $this->render('camera',['camera'=>$camera]);
     }
 

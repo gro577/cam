@@ -18,6 +18,7 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
@@ -57,6 +58,7 @@ AppAsset::register($this);
                             <li><a href="index-slider.htm">Slider Only</a></li>
                         </ul>
                     </li>
+                    <li><a href="/camera/list">Камера</a></li>
                     <li><a href="features.htm">Features</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Pages <b

@@ -1,6 +1,6 @@
 <?php
 use yii\widgets\LinkPager;
-
+use yii\helpers\Url;
 
     // выводим название организации (пример)
 
@@ -15,21 +15,23 @@ use yii\widgets\LinkPager;
 
     <!-- Blog Post 1 -->
     <?php foreach ($models as $model) :?>
-    <article>
+    <article class="cameraArticle">
 
 
         <div>
 
-            <h4 class="title-bg"><a href="blog-single.htm">A subject that is beautiful in itself</a></h4>
+            <h4 class="title-bg"><a href="blog-single.htm"><?=$model->title?></a></h4>
             <a href="camera"><img src="<?=$model->preview?>"  class="align-left"></a>
             <p><?=$model->description?></p>
-            <a href="camera"><button class="btn btn-mini btn-inverse" type="button">Перейти</button></a>
+            <a href="<?= Url::toRoute(['camera', 'id' => $model->id]);?>"><button class="btn btn-mini btn-inverse" type="button">Перейти</button></a>
             <div class="post-summary-footer">
 
             </div>
 
 
+
         </div>
+        <br>
     </article>
     <?php endforeach;?>
     <!-- Blog Post 2 -->
