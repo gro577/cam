@@ -30,7 +30,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'url:ntext',
-            'base_url:ntext',
+            //'base_url:ntext',
+            [
+                'attribute'=>'base_url',
+                'format'=>'html',
+                'value'=>function($data){
+        return "<a href=\"$data->base_url\">$data->base_url</a>";
+                }
+            ],
             'title:ntext',
             'breadcrumbs:ntext',
             'preview:ntext',
