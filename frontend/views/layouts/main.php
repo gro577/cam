@@ -58,7 +58,7 @@ AppAsset::register($this);
                             <li><a href="index-slider.htm">Slider Only</a></li>
                         </ul>
                     </li>
-                    <li><a href="/camera/list">Камера</a></li>
+                    <li><a href="list">Камера</a></li>
                     <li><a href="features.htm">Features</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Pages <b
