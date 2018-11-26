@@ -2,33 +2,32 @@
 namespace frontend\components;
 
 use yii\web\UrlRuleInterface;
+use frontend\models\Camera;
 
 class SefUrl implements UrlRuleInterface
 {
     public function parseRequest($manager, $request)
     {
-        // TODO: Implement parseRequest() method.
         $url = $request->getUrl();
-        if (strpos($url, '?')) {
-            $urlRoute = explode('?', $url)[1];
-            $urlRouteArray = explode('&', $urlRoute);
-            $route = substr(str_replace('%2F', '/', array_shift($urlRouteArray)), 2);
-            $params = array();
-            foreach ($urlRouteArray as $param) {
-                $param = explode('=', $param);
-                $params[$param[0]] = $param[1];
+        if (!empty($url) && $url!='/') {
+            if(strpos($url,'/')!==false){
+                $url = substr($url, 1);
+            }
+            $camera=Camera::findByAlias($url);
+            if(!empty($camera)){
+                $route = '/camera/camera';
+                $params=['id'=>$camera->id];
+                return [$route, $params];
             }
         }
-        return [$route, $params];
+        return false;
     }
 
     public function createUrl($manager, $route, $params)
     {
-       // echo "\"></a>baseurl<pre>";var_dump($manager->rules);echo "</pre>";
-       // echo "\"></a>manager<pre>";var_dump($manager);echo "</pre>";
-        echo "route<pre>";var_dump($route);echo "</pre>";
-        echo "params<pre>";var_dump($params);echo "</pre>";
-       // die;
-        return "ololo";
+        if(!empty($params['id'])){
+            $camera=Camera::findById($params['id']);
+            return $camera->alias;
+        }
     }
 }

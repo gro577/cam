@@ -17,5 +17,8 @@ class Camera extends Camers
     public static function findById($id){
         return static::findOne(['id'=>$id, 'publicate'=>self::PUBLICATE]);
     }
+    public static function findByAlias($alias){
+        return static::findOne(['alias'=>$alias, 'publicate'=>self::PUBLICATE]);
+    }
 
 }
