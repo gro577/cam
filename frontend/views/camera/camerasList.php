@@ -20,7 +20,7 @@ use yii\helpers\Url;
 
         <div>
 
-            <h4 class="title-bg"><a href="blog-single.htm"><?=$model->title?></a></h4>
+            <h4 class="title-bg"><a href="<?= Url::toRoute(['camera', 'id' => $model->id]);?>"><?=$model->title?></a></h4>
            <!-- <a href="camera"><img src=""  class="align-left"></a>-->
             <p><?=$model->description?></p>
             <a href="<?= Url::toRoute(['camera', 'id' => $model->id]);?>"><button class="btn btn-mini btn-inverse" type="button">Перейти</button></a>
