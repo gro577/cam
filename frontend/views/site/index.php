@@ -87,6 +87,7 @@ $this->title = 'My Yii Application';
 
         <!-- Blog Preview
         ================================================== -->
+		<!--
         <div class="span5">
 
             <h5 class="title-bg">From the Blog
@@ -97,10 +98,10 @@ $this->title = 'My Yii Application';
 
             <div id="blogCarousel" class="carousel slide ">
 
-                <!-- Carousel items -->
+               
                 <div class="carousel-inner">
 
-                    <!-- Blog Item 1 -->
+                   
                     <div class="active item">
                         <a href="blog-single.htm"><img src="img/gallery/blog-med-img-1.jpg" alt=""
                                                        class="align-left blog-thumb-preview"/></a>
@@ -129,7 +130,7 @@ $this->title = 'My Yii Application';
                         <p>
                     </div>
 
-                    <!-- Blog Item 2 -->
+                    
                     <div class="item">
                         <a href="blog-single.htm"><img src="img/gallery/blog-med-img-1.jpg" alt=""
                                                        class="align-left blog-thumb-preview"/></a>
@@ -158,7 +159,7 @@ $this->title = 'My Yii Application';
                         <p>
                     </div>
 
-                    <!-- Blog Item 3 -->
+                    
                     <div class="item">
                         <a href="blog-single.htm"><img src="img/gallery/blog-med-img-1.jpg" alt=""
                                                        class="align-left blog-thumb-preview"/></a>
@@ -190,9 +191,10 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
         </div>
-
+		-->
         <!-- Client Area
         ================================================== -->
+		<!--
         <div class="span5">
 
             <h5 class="title-bg">Recent Clients
@@ -201,9 +203,9 @@ $this->title = 'My Yii Application';
                 <button id="btn-client-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
             </h5>
 
-            <!-- Client Testimonial Slider-->
+            
             <div id="clientCarousel" class="carousel slide no-margin">
-                <!-- Carousel items -->
+               
                 <div class="carousel-inner">
 
                     <div class="active item">
@@ -233,7 +235,7 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
 
-            <!-- Client Logo Thumbs-->
+           
             <ul class="client-logos">
                 <li><a href="#" class="client-link"><img src="img/gallery/client-img-1.png" alt="Client"></a>
                 </li>
@@ -248,6 +250,6 @@ $this->title = 'My Yii Application';
             </ul>
 
         </div>
-
+		-->
     </div><!-- End Bottom Section -->
 </div>

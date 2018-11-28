@@ -39,26 +39,29 @@ AppAsset::register($this);
         <!-- Logo
         ================================================== -->
         <div class="span5 logo">
-            <a href="index.htm"><img src="img/piccolo-logo.png" alt=""/></a>
-            <h5>Big Things... Small Packages</h5>
+           <!-- <a href="index.htm"><img src="img/piccolo-logo.png" alt=""/></a>  -->
+            <h3><a href="/">bedtrip.ru</a> - твое диванное путешетвие</h3>
         </div>
 
         <!-- Main Navigation
         ================================================== -->
         <div class="span7 navigation">
             <div class="navbar hidden-phone">
-
+			
                 <ul class="nav">
-                    <li class="dropdown active">
+					<li class="active"><a href="/" >Гланая</a></li>
+					<li><a href="list">Камеры</a></li>
+                    <!--
+					<li class="dropdown active">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="index.htm">Home <b
                                     class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="index.htm">Full Page</a></li>
+                            <li><a href="/">Full Page</a></li>
                             <li><a href="index-gallery.htm">Gallery Only</a></li>
                             <li><a href="index-slider.htm">Slider Only</a></li>
                         </ul>
                     </li>
-                    <li><a href="list">Камера</a></li>
+                    
                     <li><a href="features.htm">Features</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Pages <b
@@ -93,6 +96,7 @@ AppAsset::register($this);
                         </ul>
                     </li>
                     <li><a href="page-contact.htm">Contact</a></li>
+					-->
                 </ul>
 
             </div>
@@ -102,10 +106,11 @@ AppAsset::register($this);
             <form action="#" id="mobile-nav" class="visible-phone">
                 <div class="mobile-nav-select">
                     <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
-                        <option value="">Navigate...</option>
-                        <option value="index.htm">Home</option>
-                        <option value="index.htm">- Full Page</option>
-                        <option value="index-gallery.htm">- Gallery Only</option>
+                        <option value="">МЕНЮ...</option>
+                        <option value="/">Главная</option>
+                        <option value="list">Камеры</option>
+                        <!--
+						<option value="index-gallery.htm">- Gallery Only</option>
                         <option value="index-slider.htm">- Slider Only</option>
                         <option value="features.htm">Features</option>
                         <option value="page-full-width.htm">Pages</option>
@@ -126,6 +131,7 @@ AppAsset::register($this);
                         <option value="blog-style4.htm">- Blog Style 4</option>
                         <option value="blog-single.htm">- Blog Single</option>
                         <option value="page-contact.htm">Contact</option>
+						-->
                     </select>
                 </div>
             </form>

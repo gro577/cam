@@ -11,8 +11,8 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'url')->textarea(['rows' => 6]) ?>
-
+	
+	<h2><a href="<?=$model->url?>"><?=$model->url?></a></h2>
 
     <h2><a href="<?=$model->base_url?>"><?=$model->base_url?></a></h2>
 
