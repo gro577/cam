@@ -13,10 +13,12 @@ class SefUrl implements UrlRuleInterface
             if(strpos($url,'/')!==false){
                 $url = substr($url, 1);
             }
-            $camera=Camera::findByAlias($url);
-            if(!empty($camera)){
-                $route = '/camera/camera';
-                $params=['id'=>$camera->id];
+            $routeArray=explode('/',$url);
+            $className='frontend\\models\\'.ucfirst($routeArray[0]);
+            $element=$className::findByAlias($routeArray[1]);
+            if(!empty($element)){
+                $route = '/'.$routeArray[0].'/element-view';
+                $params=['id'=>$element->id];
                 return [$route, $params];
             }
         }
@@ -26,8 +28,10 @@ class SefUrl implements UrlRuleInterface
     public function createUrl($manager, $route, $params)
     {
         if(!empty($params['id'])){
-            $camera=Camera::findById($params['id']);
-            return $camera->alias;
+            $routeArray=explode('/',$route);
+            $className='frontend\\models\\'.ucfirst($routeArray[0]);
+            $camera=$className::findById($params['id']);
+            return "/$routeArray[0]/$camera->alias";
         }
     }
 }

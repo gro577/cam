@@ -10,8 +10,9 @@ namespace frontend\models;
 
 
 use common\models\Camers;
+use frontend\IFaces\RouteModelInterface;
 
-class Camera extends Camers
+class Camera extends Camers implements RouteModelInterface
 {
     const PUBLICATE = 1;
     public static function findById($id){
