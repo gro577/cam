@@ -14,7 +14,7 @@ class SefUrl implements UrlRuleInterface
                 $url = substr($url, 1);
             }
             $routeArray=explode('/',$url);
-            $className='frontend\\models\\'.ucfirst($routeArray[0]);
+            $className=$this->getModelClassName($routeArray[0]);
             $element=$className::findByAlias($routeArray[1]);
             if(!empty($element)){
                 $route = '/'.$routeArray[0].'/element-view';
@@ -29,9 +29,13 @@ class SefUrl implements UrlRuleInterface
     {
         if(!empty($params['id'])){
             $routeArray=explode('/',$route);
-            $className='frontend\\models\\'.ucfirst($routeArray[0]);
+            $className=$this->getModelClassName($routeArray[0]);
             $camera=$className::findById($params['id']);
             return "/$routeArray[0]/$camera->alias";
         }
+    }
+
+    private function getModelClassName($name){
+        return 'frontend\\models\\'.ucfirst($name);
     }
 }

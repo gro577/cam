@@ -20,10 +20,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'alias')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'breadcrumbs')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'preview')->textarea(['rows' => 6]) ?>
-
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'geography')->textarea(['rows' => 6]) ?>
@@ -42,6 +38,11 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'publicate')->dropDownList([
         '0' => 'не опубликована',
         '1' => 'опубликована',
+    ]); ?>
+
+    <?= $form->field($model, 'moderated')->dropDownList([
+        '0' => 'не модерирована',
+        '1' => 'модерирована',
     ]); ?>
 
     <div class="form-group">

@@ -61,6 +61,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
 
             [
+                'attribute' => 'moderated',
+                'options' => ['style' => 'width: 100px'],
+                //     'options' =>['style'=>'width: 100px!important;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;'],
+            ],
+
+            [
                 'class' => 'yii\grid\ActionColumn',
                 'options' => ['style' => 'width: 70px'],
             ],

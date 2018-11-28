@@ -46,8 +46,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             'title:ntext',
-            'breadcrumbs:ntext',
-            'preview:ntext',
             'description:ntext',
             'geography:ntext',
             'time_zone:ntext',
@@ -55,6 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'source:ntext',
             'url_type:url',
             'publicate',
+            'moderated',
         ],
     ]) ?>
 
