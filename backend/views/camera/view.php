@@ -29,11 +29,23 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'url:ntext',
-            'base_url:ntext',
+            //'url:ntext',
+			[
+                'attribute'=>'url',
+                'format'=>'html',
+                'value'=>function($data){
+        return "<a href=\"$data->url\">$data->url</a>";
+                }
+            ],
+            //'base_url:ntext',
+            [
+                'attribute'=>'base_url',
+                'format'=>'html',
+                'value'=>function($data){
+        return "<a href=\"$data->base_url\">$data->base_url</a>";
+                }
+            ],
             'title:ntext',
-            'breadcrumbs:ntext',
-            'preview:ntext',
             'description:ntext',
             'geography:ntext',
             'time_zone:ntext',
@@ -41,6 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'source:ntext',
             'url_type:url',
             'publicate',
+            'moderated',
         ],
     ]) ?>
 

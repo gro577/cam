@@ -9,11 +9,12 @@
 namespace frontend\controllers;
 
 
+use frontend\IFaces\RouteControllersInterface;
 use frontend\models\Camera;
 use yii\data\Pagination;
 use yii\web\Controller;
 
-class CameraController extends Controller
+class CameraController extends Controller implements RouteControllersInterface
 {
     const LIMITITEMSPERPAGE = 10;
 
@@ -30,7 +31,7 @@ class CameraController extends Controller
         ]);
     }
 
-    public function actionCamera($id){
+    public function actionElementView($id){
         $camera = Camera::findById($id);
         return $this->render('camera',['camera'=>$camera]);
     }

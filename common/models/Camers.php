@@ -12,8 +12,6 @@ use Yii;
  * @property string $base_url
  * @property string $title
  * @property string $alias
- * @property string $breadcrumbs
- * @property string $preview
  * @property string $description
  * @property string $geography
  * @property string $time_zone
@@ -21,6 +19,7 @@ use Yii;
  * @property string $source
  * @property int $url_type
  * @property int $publicate
+ * @property int $moderated
  */
 class Camers extends \yii\db\ActiveRecord
 {
@@ -38,10 +37,9 @@ class Camers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['url', 'base_url', 'title', 'breadcrumbs', 'preview', 'description', 'geography', 'time_zone', 'quality', 'source'], 'string'],
-            [['title', 'breadcrumbs', 'url_type'], 'required'],
-            [['url_type', 'publicate'], 'integer'],
-            [['alias'], 'string', 'max' => 250],
+            [['url', 'base_url', 'title', 'alias', 'description', 'geography', 'time_zone', 'quality', 'source'], 'string'],
+            [['title', 'alias', 'url_type'], 'required'],
+            [['url_type', 'publicate', 'moderated'], 'integer'],
         ];
     }
 
@@ -56,8 +54,6 @@ class Camers extends \yii\db\ActiveRecord
             'base_url' => 'Base Url',
             'title' => 'Title',
             'alias' => 'Alias',
-            'breadcrumbs' => 'Breadcrumbs',
-            'preview' => 'Preview',
             'description' => 'Description',
             'geography' => 'Geography',
             'time_zone' => 'Time Zone',
@@ -65,8 +61,9 @@ class Camers extends \yii\db\ActiveRecord
             'source' => 'Source',
             'url_type' => 'Url Type',
             'publicate' => 'Publicate',
+            'moderated' => 'Moderated',
         ];
     }
-
-
 }
+
+

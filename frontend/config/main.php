@@ -37,13 +37,27 @@ return [
             'errorAction' => 'site/error',
         ],
 
-
         'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules'=> [
+                /* Ваши правила  */
+                'camera' => 'camera/index',
+                'list' => 'camera/list',
+                'site' => 'site/index',
+                '/' =>'/',
+                [
+
+                    'class' => 'frontend\components\SefUrl'], // первый
+          //      ['class' => 'frontend\components\Pages\StrictParseRequest'], // второй
+            ],
+        ],
+ /*       'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
-        ],
+        ],*/
 
     ],
     'params' => $params,
