@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+
 /* @var $this yii\web\View */
 /* @var $model backend\models\Camera */
 /* @var $form yii\widgets\ActiveForm */
@@ -13,8 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'url')->textarea(['rows' => 6]) ?>
 
-
-    <h2><a href="<?=$model->base_url?>"><?=$model->base_url?></a></h2>
+    <?= $form->field($model, 'base_url')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'title')->textarea(['rows' => 6]) ?>
 
