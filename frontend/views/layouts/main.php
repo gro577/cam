@@ -143,15 +143,11 @@ AppAsset::register($this);
     <div class="span2 blog-style-2"><!-- Begin sidebar column -->
 
         <!--Navigation-->
-        <h5 class="title-bg">Navigation</h5>
-        <ul class="post-category-list">
-            <li><a href="#"><i class="icon-plus-sign"></i>About Us</a></li>
-            <li><a href="#"><i class="icon-plus-sign"></i>Services</a></li>
-            <li><a href="#"><i class="icon-plus-sign"></i>Mission</a></li>
-            <li><a href="#"><i class="icon-plus-sign"></i>Clients</a></li>
-        </ul>
+        <h5 class="title-bg">Случайные камеры</h5>
+        <?=\frontend\widgets\randomcameras\RandomCamerasWidget::widget()?>
 
-        <!--Latest News-->
+
+        <!--Latest News
         <h5 class="title-bg">Latest News</h5>
         <ul class="popular-posts">
             <li>
@@ -169,14 +165,14 @@ AppAsset::register($this);
                 <em>Posted on 09/01/15</em>
             </li>
         </ul>
-
-        <!--Testimonials-->
+-->
+        <!--Testimonials
         <h5 class="title-bg">Testimonials</h5>
 
         <p class="quote-text side">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum."<cite>- Client Name, Big Company</cite></p>
 
         <p class="quote-text side">"Adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum."<cite>- Another Client Name, Big Company</cite></p>
-
+-->
 
     </div><!-- End sidebar column -->
         <?= $content ?>
