@@ -2,7 +2,7 @@
 use yii\widgets\LinkPager;
 use yii\helpers\Url;
 
-    // выводим название организации (пример)
+// выводим название организации (пример)
 
 
 // отображаем постраничную разбивку
@@ -14,26 +14,34 @@ use yii\helpers\Url;
 <div class="span7 blog">
 
     <!-- Blog Post 1 -->
-    <?php foreach ($models as $model) :?>
-    <article class="cameraArticle">
+    <?php foreach ($models as $model) :
+        if ($model->url_type === 0) {
+            $preview = explode('?autoplay', explode('embed/', $model->url)[1])[0];
+            $previewPath = 'https://i.ytimg.com/vi/' . $preview . '/mqdefault_live.jpg';
+        }
+        ?>
+        <article class="cameraArticle">
 
+            <div>
 
-        <div>
+                <h4 class="title-bg"><a
+                            href="<?= Url::toRoute(['camera', 'id' => $model->id]); ?>"><?= $model->title ?></a></h4>
+                <?php if (!empty($previewPath)): ?>
+                    <a href="camera"><img src="<?= $previewPath ?>" class="align-left"></a>
+                <?php endif; ?>
+                <p><?= $model->description ?></p>
+                <a href="<?= Url::toRoute(['camera', 'id' => $model->id]); ?>">
+                    <button class="btn btn-mini btn-inverse" type="button">Перейти</button>
+                </a>
+                <div class="post-summary-footer">
 
-            <h4 class="title-bg"><a href="<?= Url::toRoute(['camera', 'id' => $model->id]);?>"><?=$model->title?></a></h4>
-           <!-- <a href="camera"><img src=""  class="align-left"></a>-->
-            <p><?=$model->description?></p>
-            <a href="<?= Url::toRoute(['camera', 'id' => $model->id]);?>"><button class="btn btn-mini btn-inverse" type="button">Перейти</button></a>
-            <div class="post-summary-footer">
+                </div>
+
 
             </div>
-
-
-
-        </div>
-        <br>
-    </article>
-    <?php endforeach;?>
+            <br>
+        </article>
+    <?php endforeach; ?>
     <!-- Blog Post 2 -->
 
 
