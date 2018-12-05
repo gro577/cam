@@ -27,7 +27,7 @@ use yii\helpers\Url;
                 <h4 class="title-bg"><a
                             href="<?= Url::toRoute(['camera', 'id' => $model->id]); ?>"><?= $model->title ?></a></h4>
                 <?php if (!empty($previewPath)): ?>
-                    <a href="camera"><img src="<?= $previewPath ?>" class="align-left"></a>
+                    <a href="<?= Url::toRoute(['camera', 'id' => $model->id]); ?>"><img src="<?= $previewPath ?>" class="align-left"></a>
                 <?php endif; ?>
                 <p><?= $model->description ?></p>
                 <a href="<?= Url::toRoute(['camera', 'id' => $model->id]); ?>">
