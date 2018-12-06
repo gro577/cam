@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Онлайн веб камеры';
 ?>
 <div class="span10">
     <div class="row headline"><!-- Begin Headline -->
@@ -29,17 +29,14 @@ $this->title = 'My Yii Application';
         <!-- Headline Text
         ================================================== -->
         <div class="span3">
-            <h3>Welcome to Piccolo. <br/>
-                A Big Theme in a Small Package.</h3>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium vulputate
-                magna
-                sit
-                amet blandit.</p>
-            <p>Cras rutrum, massa non blandit convallis, est lacus gravida enim, eu fermentum ligula orci et
+            <h3>BEDRIP<br/>
+                Подглядывай за планетой с нами.</h3>
+            <p class="lead">Найди места для путешествий твоей мечты.</p>
+          <!--  <p>Cras rutrum, massa non blandit convallis, est lacus gravida enim, eu fermentum ligula orci et
                 tortor.
                 In
                 sit amet nisl ac leo pulvinar molestie. Morbi blandit ultricies ultrices.</p>
-            <a href="#"><i class="icon-plus-sign"></i>Read More</a>
+            <a href="#"><i class="icon-plus-sign"></i>Read More</a>-->
         </div>
     </div><!-- End Headline -->
 
