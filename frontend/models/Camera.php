@@ -11,6 +11,7 @@ namespace frontend\models;
 
 use common\models\Camers;
 use frontend\IFaces\RouteModelInterface;
+use yii\db\Expression;
 
 class Camera extends Camers implements RouteModelInterface
 {
@@ -20,6 +21,10 @@ class Camera extends Camers implements RouteModelInterface
     }
     public static function findByAlias($alias){
         return static::findOne(['alias'=>$alias, 'publicate'=>self::PUBLICATE]);
+    }
+
+    public static function findByLimit($limit){
+        return static::find()->where(['publicate'=>self::PUBLICATE])->orderBy(new Expression('rand()'))->limit($limit)->all();
     }
 
 }
