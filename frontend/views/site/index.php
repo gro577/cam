@@ -32,51 +32,19 @@ $this->title = 'Онлайн веб камеры';
             <h3>BEDRIP<br/>
                 Подглядывай за планетой с нами.</h3>
             <p class="lead">Найди места для путешествий твоей мечты.</p>
-          <!--  <p>Cras rutrum, massa non blandit convallis, est lacus gravida enim, eu fermentum ligula orci et
-                tortor.
-                In
-                sit amet nisl ac leo pulvinar molestie. Morbi blandit ultricies ultrices.</p>
-            <a href="#"><i class="icon-plus-sign"></i>Read More</a>-->
+            <!--  <p>Cras rutrum, massa non blandit convallis, est lacus gravida enim, eu fermentum ligula orci et
+                  tortor.
+                  In
+                  sit amet nisl ac leo pulvinar molestie. Morbi blandit ultricies ultrices.</p>
+              <a href="#"><i class="icon-plus-sign"></i>Read More</a>-->
         </div>
     </div><!-- End Headline -->
 
-    <!-- Begin Gallery Row --><div class="span10"><!--Begin page content column-->
+    <!-- Begin Gallery Row -->
+    <div class="span10"><!--Begin page content column-->
 
 
-        <h5 class="title-bg"> This is a sub head divider</h5>
-
-        <div class="row">
-            <div class="span2">
-                <img src="img/gallery/gallery-img-1-6col.jpg" alt="Image" class="thumbnail">
-                <h5>4 Column Layout</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.</p>
-                <button class="btn btn-mini btn-inverse" type="button">Read more</button>
-            </div>
-            <div class="span2">
-                <img src="img/gallery/gallery-img-1-6col.jpg" alt="Image" class="thumbnail">
-                <h5>4 Column Layout</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.</p>
-                <button class="btn btn-mini btn-inverse" type="button">Read more</button>
-            </div>
-            <div class="span2">
-                <img src="img/gallery/gallery-img-13-6col.jpg" alt="Image" class="thumbnail">
-                <h5>4 Column Layout</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.</p>
-                <button class="btn btn-mini btn-inverse" type="button">Read more</button>
-            </div>
-            <div class="span2">
-                <img src="img/gallery/gallery-img-14-6col.jpg" alt="Image" class="thumbnail">
-                <h5>4 Column Layout</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.</p>
-                <button class="btn btn-mini btn-inverse" type="button">Read more</button>
-            </div>
-            <div class="span2">
-                <img src="img/gallery/gallery-img-1-6col.jpg" alt="Image" class="thumbnail">
-                <h5>4 Column Layout</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna. Nulla faucibus ligula eget ante varius ac euismod odio placerat. Nam sit amet felis non lorem faucibus rhoncus vitae id dui.</p>
-                <button class="btn btn-mini btn-inverse" type="button">Read more</button>
-            </div></div>
-
+        <?= \frontend\widgets\topcams\TopCamsWidget::widget() ?>
 
     </div><!-- End Gallery Row -->
 
@@ -84,7 +52,7 @@ $this->title = 'Онлайн веб камеры';
 
         <!-- Blog Preview
         ================================================== -->
-		<!--
+        <!--
         <div class="span5">
 
             <h5 class="title-bg">From the Blog
@@ -188,10 +156,10 @@ $this->title = 'Онлайн веб камеры';
                 </div>
             </div>
         </div>
-		-->
+        -->
         <!-- Client Area
         ================================================== -->
-		<!--
+        <!--
         <div class="span5">
 
             <h5 class="title-bg">Recent Clients
@@ -247,6 +215,6 @@ $this->title = 'Онлайн веб камеры';
             </ul>
 
         </div>
-		-->
+        -->
     </div><!-- End Bottom Section -->
 </div>

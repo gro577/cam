@@ -181,7 +181,9 @@ AppAsset::register($this);
 
 <div class="footer-container"><!-- Begin Footer -->
     <div class="container">
+
         <div class="row footer-row">
+            <!--
             <div class="span3 footer-col">
                 <h5>About Us</h5>
                 <img src="img/piccolo-footer-logo.png" alt="Piccolo"/><br/><br/>
@@ -237,11 +239,13 @@ AppAsset::register($this);
                     <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
                 </ul>
             </div>
+            -->
         </div>
 
         <div class="row"><!-- Begin Sub Footer -->
             <div class="span12 footer-col footer-sub">
                 <div class="row no-margin">
+           <!--
                     <div class="span6"><span class="left">Copyright 2012 Piccolo Theme. All rights reserved.</span>
                     </div>
                     <div class="span6">
@@ -251,6 +255,7 @@ AppAsset::register($this);
                                         href="#">Contact</a>
                             </span>
                     </div>
+             -->
                 </div>
             </div>
         </div><!-- End Sub Footer -->

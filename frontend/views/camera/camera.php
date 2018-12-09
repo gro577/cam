@@ -12,12 +12,12 @@
 
     <h2 class="title-bg"><?= $camera['title'] ?></h2>
     <div class="iFrameContainer">
-        <iframe class="iFrameClass"  src="<?= $camera['url'] ?>" frameborder="0"
+        <iframe class="iFrameClass" src="<?= $camera['url'] ?>" frameborder="0"
                 allowfullscreen=""></iframe>
     </div>
-
+    <br>
     <p><?= $camera['description'] ?></p>
-
+    <!--
     <div class="row">
         <div class="span3">
             <h5>2 Column Layout</h5>
@@ -38,7 +38,7 @@
             <button class="btn btn-mini btn-inverse" type="button">Read more</button>
         </div>
     </div>
-
+    -->
 </div> <!--End page content column-->
 
 <!-- Page Right Sidebar

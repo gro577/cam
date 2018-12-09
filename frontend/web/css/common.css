@@ -6,13 +6,34 @@
     overflow: hidden;
     border: 1px solid #ccc;
 }
-.iFrameClass{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+
+.iFrameClass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-.cameraArticle{
+
+.cameraArticle {
     display: flex;
+}
+
+.topcamers {
+}
+
+.clip {
+    /*white-space: nowrap;  Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+}
+.over{
+    height: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.bottomButton{
+    position:absolute;
+    bottom:0;
 }
