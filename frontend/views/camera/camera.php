@@ -1,4 +1,8 @@
 <?php
+$this->title=$camera['title'];
+$description=mb_substr($camera['description'],0,127).'...';
+$this->registerMetaTag(['name' => 'description', 'content' => $description]);
+//$this->description=substr($camera['description'],0,126).'&hellip';
 /**
  * Created by PhpStorm.
  * User: root
