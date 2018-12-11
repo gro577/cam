@@ -29,7 +29,7 @@ class AppAsset extends AssetBundle
         'js/jquery.prettyPhoto.js',
         'js/jquery.flexslider.js',
         'js/jquery.custom.js',
-       // 'js/templateScript.js',
+        'js/templateScript.js',
     ];
     public $depends = [
        // 'yii\web\YiiAsset',
