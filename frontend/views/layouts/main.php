@@ -32,11 +32,13 @@ ym(51511571, "init", {
 id:51511571,
 clickmap:true,
 trackLinks:true,
-accurateTrackBounce:true
+accurateTrackBounce:true,
+webvisor:true
 });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/51511571" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
 
 </head>
 <body class="home">
