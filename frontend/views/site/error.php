@@ -9,19 +9,20 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
-<div class="site-error">
+<div class="span7 blog">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <!-- Blog Post 1 -->
+        <article class="cameraArticle">
 
-    <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+            <div>
+
+                <h1 class="title-bg ">#404</h1>
+                <p>Приносим свои извинения, но страницы, с указанным вами адресом - не существует.</p>
+                <div class="post-summary-footer">
+
+                </div>
+
+
+            </div>
+        </article>
     </div>
-
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
-
-</div>
