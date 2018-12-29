@@ -16,7 +16,8 @@
 }
 
 .cameraArticle {
-    display: flex;
+    //display: flex;
+	width: 100%;
 }
 
 .topcamers {
@@ -36,4 +37,10 @@
 .bottomButton{
     position:absolute;
     bottom:0;
+}
+.cameraListPreview{
+	display:inline-block;
+}
+.cameraListDesc{
+	display: inline-block;
 }

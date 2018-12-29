@@ -8,7 +8,16 @@ use yii\helpers\Url;
 // отображаем постраничную разбивку
 
 ?>
+<script>
+$(document).ready(function() {
 
+	var fullDesc="<?=$model->description ?>";
+	
+	
+
+});
+
+</script>
 <!-- Blog вPosts
 ================================================== -->
 <div class="span7 blog">
@@ -27,9 +36,17 @@ use yii\helpers\Url;
                 <h4 class="title-bg"><a
                             href="<?= Url::toRoute(['camera', 'id' => $model->id]); ?>"><?= $model->title ?></a></h4>
                 <?php if (!empty($previewPath)): ?>
-                    <a href="<?= Url::toRoute(['camera', 'id' => $model->id]); ?>"><img src="<?= $previewPath ?>" class="align-left"></a>
+                    <a href="<?= Url::toRoute(['camera', 'id' => $model->id]); ?>"><img class="cameraListPreview" src="<?= $previewPath ?>" class="align-left"></a>
                 <?php endif; ?>
-                <p><?= $model->description ?></p>
+				<?php
+				if(strlen($model->description)>130){
+					$textDesc=mb_substr($model->description,0,130)."...";
+				}
+				else{
+					$textDesc=$model->description;
+				}
+				?>
+                <p class="cameraListDesc"><?=$textDesc?></p>
                 <a href="<?= Url::toRoute(['camera', 'id' => $model->id]); ?>">
                     <button class="btn btn-mini btn-inverse" type="button">Перейти</button>
                 </a>
