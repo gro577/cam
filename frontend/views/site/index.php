@@ -2,7 +2,8 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Онлайн веб камеры';
+$this->title = 'Веб камеры мира онлайн в реальном времени';
+$this->registerMetaTag(['name' => 'description', 'content' => 'Веб камеры мира онлайн в реальном времени']);
 ?>
 <div class="span10">
     <div class="row headline"><!-- Begin Headline -->

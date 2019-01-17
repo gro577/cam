@@ -6,18 +6,10 @@ use yii\helpers\Url;
 
 
 // отображаем постраничную разбивку
-
+$this->title = 'Веб камеры мира онлайн в реальном времени';
+$this->registerMetaTag(['name' => 'description', 'content' => 'Веб камеры мира онлайн в реальном времени']);
 ?>
-<script>
-$(document).ready(function() {
 
-	var fullDesc="<?=$model->description ?>";
-	
-	
-
-});
-
-</script>
 <!-- Blog вPosts
 ================================================== -->
 <div class="span7 blog">
