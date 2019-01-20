@@ -99,7 +99,7 @@ class CameraController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-      //  echo "</pre>";var_dump(Yii::$app->request->post());echo "</pre>";die;
+        //  echo "</pre>";var_dump(Yii::$app->request->post());echo "</pre>";die;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -138,4 +138,28 @@ class CameraController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+
+    public function actionUpdateurl()
+    {
+
+        if (!empty(Yii::$app->request->post('url'))) {
+            $url=Yii::$app->request->post('url');
+            $file = file_get_contents($url);
+            preg_match('/div\sid\=\"player(.*?)\<\/div/m', $file, $player);
+            preg_match('/iframe(.*?)iframe/m', $player[1], $iframe);
+            if (!empty($iframe))
+                preg_match('/src\=\"(.*?)\"/m', $iframe[1], $cameraUrl);
+            if (empty($cameraUrl)) {
+                preg_match("/\.php\?(.*?)\\'\)\"/m", $file, $cameraUrl);
+            }
+
+            if (!empty($cameraUrl[1])){
+                return $cameraUrl[1];
+            }
+            else
+                return false;
+        }
+    }
+
 }
