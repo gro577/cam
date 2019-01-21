@@ -118,3 +118,8 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+.fixed-save-button{
+    position: fixed!important;
+    top: 100px;
+    right: 50px;
+}

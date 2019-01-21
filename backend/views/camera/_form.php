@@ -32,7 +32,7 @@ use yii\helpers\Url;
 
 
 </script>
-<?php if (!empty($model)): ?>
+<?php if (!empty($model->base_url)): ?>
 
     <?= Html::submitButton('Спарсить url youtube', ['class' => 'btn btn-success','onClick'=>'updateUrl()']) ?>
 <?php endif; ?>
@@ -78,7 +78,7 @@ use yii\helpers\Url;
     ]); ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success fixed-save-button']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
