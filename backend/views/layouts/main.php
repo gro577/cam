@@ -9,6 +9,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -22,10 +23,16 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <?php $this->registerJsFile(Yii::getAlias('@web').'/js/common.js',['position'=>yii\web\View::POS_BEGIN])?>
 </head>
 <body>
 <?php $this->beginBody() ?>
+<script>
 
+
+
+
+</script>
 <div class="wrap">
     <?php
     NavBar::begin([
@@ -42,18 +49,19 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
         $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
+
+
             . '</li>';
     }
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,
     ]);
+    echo   Html::button(
+        'Гененрировать Sitemap',
+        ['class' => 'navbar-nav navbar-right btn-success btn','onClick' => 'createSitemapXml(\''.Url::to(['sitemap/generate']).'\'gits)', 'style'=>"margin-top: 10px;"]
+    );
     NavBar::end();
     ?>
 
