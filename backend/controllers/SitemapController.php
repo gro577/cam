@@ -12,10 +12,34 @@ use Yii;
 use yii\web\Controller;
 use \SimpleXMLElement as SimpleXMLElement;
 use backend\models\Camera;
+use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 class SitemapController extends Controller
 {
     const BASE_URL = 'http://www.bedtrip.ru/';
+
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['generate'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
+    }
 
     public function actionGenerate()
     {
