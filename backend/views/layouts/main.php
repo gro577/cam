@@ -44,6 +44,14 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
         $menuItems[] = '<li>'
+            . Html::a(
+                'Категории',
+                Url::to(['categories/index'])
+            ).'</li><li>'
+            . Html::a(
+                'Камеры',
+                 Url::to(['camera/index'])
+            ).'</li><li>'
             . Html::button(
                 'Гененрировать Sitemap',
                 ['class' => ' btn-success btn', 'onClick' => 'createSitemapXml(\'' . Url::to(['sitemap/generate']) . '\')', 'style' => "margin-top: 10px;"]
