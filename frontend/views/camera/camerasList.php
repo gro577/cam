@@ -71,7 +71,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => 'Веб камер
 
 <div class="span3 sidebar page-right-sidebar"><!-- Begin sidebar column -->
 
-    <!--User Login-->
+    <!--User Login-
     <h5 class="title-bg">Немного о проекте</h5>
             <div class="tab-pane" id="about">
             <p>Наш каталог онлайн камер позволит Вам увидеть новые места. 
@@ -83,5 +83,5 @@ $this->registerMetaTag(['name' => 'description', 'content' => 'Веб камер
 			</p>
 
             Мы постоянно пополняем нашу коллекцию трансляций, оставайтесь с нами, и вы откроете для себя много нового.
-        </div>
+        </div>->
 </div><!-- End sidebar column -->
