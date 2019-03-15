@@ -3,7 +3,8 @@
 namespace common\models;
 
 use Yii;
-
+use common\models\CategoryAttachments;
+use common\models\Categories;
 /**
  * This is the model class for table "camers".
  *
@@ -26,6 +27,8 @@ class Camers extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+	const PUBLICATE = 1;
+	 
     public static function tableName()
     {
         return 'camers';
@@ -64,6 +67,11 @@ class Camers extends \yii\db\ActiveRecord
             'moderated' => 'Moderated',
         ];
     }
+	
+	public function getMainCategory(){
+		$attachment=CategoryAttachments::findOne(['camera_id'=>$this->id,'main_category'=>CategoryAttachments::MAINCATEGORY]);
+		return $attachment->Category;
+	}
 }
 
 

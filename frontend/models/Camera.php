@@ -15,7 +15,6 @@ use yii\db\Expression;
 
 class Camera extends Camers implements RouteModelInterface
 {
-    const PUBLICATE = 1;
     public static function findById($id){
         return static::findOne(['id'=>$id, 'publicate'=>self::PUBLICATE]);
     }

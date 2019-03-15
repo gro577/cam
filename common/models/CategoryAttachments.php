@@ -3,7 +3,7 @@
 namespace common\models;
 
 use Yii;
-
+use common\models\Categories;
 /**
  * This is the model class for table "category_attachments".
  *
@@ -17,6 +17,7 @@ class CategoryAttachments extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+	const MAINCATEGORY = 1;
     public static function tableName()
     {
         return 'category_attachments';
@@ -45,4 +46,8 @@ class CategoryAttachments extends \yii\db\ActiveRecord
             'main_category' => 'Main Category',
         ];
     }
+	
+	public function getCategory(){
+		return Category::findOne(['id'=>$this->category_id]);
+	}
 }

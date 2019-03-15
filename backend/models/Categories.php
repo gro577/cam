@@ -8,8 +8,12 @@
 
 namespace backend\models;
 
+use backend\models\Camera;
+use backend\models\CategoryAttachments;
 
 class Categories extends \common\models\Categories
 {
-
+	//public static function findPublicate{
+	//	$cameras=Camera::find('id')->where(['publicate'=>Camera::PUBLICATE])->all();
+	//}
 }
