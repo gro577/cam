@@ -3,7 +3,7 @@
 namespace backend\models;
 
 
-class CategoryAttachments extends common\models\CategoryAttachments
+class CategoryAttachments extends \common\models\CategoryAttachments
 {
 
 }

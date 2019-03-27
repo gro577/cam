@@ -48,6 +48,10 @@ AppAsset::register($this);
                 'Категории',
                 Url::to(['categories/index'])
             ).'</li><li>'
+			. Html::a(
+                'Опубликованные категории',
+                Url::to(['categories/publicate-categories'])
+            ).'</li><li>'
             . Html::a(
                 'Камеры',
                  Url::to(['camera/index'])

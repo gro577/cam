@@ -4,11 +4,14 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\Categories;
+use backend\models\Camera;
+use backend\models\CategoryAttachments;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\helpers\ArrayHelper;
 
 /**
  * CategoriesController implements the CRUD actions for Categories model.
@@ -109,7 +112,7 @@ class CategoriesController extends Controller
         ]);
     }
 
-    /**
+    /** 
      * Deletes an existing Categories model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
@@ -138,4 +141,17 @@ class CategoriesController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+	
+	public function actionPublicateCategories(){
+		$publicateCamerasIDs=ArrayHelper::getColumn(Camera::find()->where(['publicate'=>Camera::PUBLICATE])->all(),'id');
+		$categoriesIds=ArrayHelper::getColumn(CategoryAttachments::find()->where(['camera_id'=>$publicateCamerasIDs])->all(),'category_id');
+		$uniqCategoriesIds=array_values(array_unique ($categoriesIds));
+		$dataProvider = new ActiveDataProvider([
+            'query' => Categories::find()->where(['id'=>$uniqCategoriesIds]),
+        ]);
+
+        return $this->render('publicate', [
+            'dataProvider' => $dataProvider,
+        ]);
+	}
 }
