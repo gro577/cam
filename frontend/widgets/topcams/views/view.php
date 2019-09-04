@@ -5,7 +5,7 @@ use yii\helpers\Url;
 ?>
 <h5 class="title-bg"> Часто просматриваемые камеры</h5>
 
-<div class="row">
+<div class="row topcamers-container">
     <?php foreach ($cams as $cam):
         if ($cam->url_type === 0) {
             $preview = explode('?autoplay', explode('embed/', $cam->url)[1])[0];

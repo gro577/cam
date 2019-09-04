@@ -16,11 +16,17 @@
 }
 
 .cameraArticle {
-    //display: flex;
+    /*display: flex;*/
 	width: 100%;
 }
 
 .topcamers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.topcamers-container {
+    display: flex;
 }
 
 .clip {
